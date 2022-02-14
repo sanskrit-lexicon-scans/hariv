@@ -1,14 +1,89 @@
 Convert the tab-delimited index file into a json object,
 python make_json_index.py hariv_index.txt index.js
- two lines have comments:
-  59,1697,1725,29
-    comment = After the verse 1713 the line is not a verse,
- 144,4195,4224,30
-    comment = One more mistake in the given numeration
-           verse gap: 1425-1429   (1415, 1420, 1430) 
+
 copy index.js for use by index.html
  cp index.js ../
- 
+
+---------------------------------------------------------------------
+Output from make_json_index.py after changes
+59,1697,1726,29: readme.txt
+89,2582,2610,29: readme.txt
+144,4196,4230,30: readme.txt
+345,10075,10104,30: readme.txt
+346,10105,10134,30: readme.txt
+347,10135,10164,30: readme.txt
+348,10165,10194,30: readme.txt
+409,11935,11961,27: readme.txt
+410,11962,11991,30: readme.txt
+411,11992,12017,26: readme.txt
+412,12018,12047,30: readme.txt
+413,12048,12081,30: readme.txt
+499,14543,14571,29: readme.txt
+563 Page records read from hariv_index.txt
+json written to index.js
+check1: 144,4196,4230,30 (-5)
+check1: 413,12048,12081,30 (-4)
+check1 stats: nok=561, nprob=2
+check2 stats: nok=562, nprob=0
+
+
+
+---------------------------------------------------------------------
+changes made to hariv_index.txt
+---------------------------------------------------------------------
+59	1697	1726	29 question? After verse 1713, the line is not a verse
+
+OLD:
+88	2552	2581	30
+89	2582	1610	29
+90	2611	2640	30
+NEW:
+88	2552	2581	30
+89	2582	2610	29 change
+90	2611	2640	30
+
+144	4196	4230	30 verse gap: 1425-1429 (1415, 1420, 1430)
+
+OLD:
+344	10045	10074	30
+345	10075	11004	30 
+346	11005	11034	30 *
+347	11035	11064	30 *
+348	11065	11094	30 *
+349	10195	10224	30
+NEW:
+344	10045	10074	30
+345	10075	10104	30 verse count?
+346	10105	10134	30 change
+347	10135	10164	30 change
+348	10165	10194	30 change
+349	10195	10224	30
+
+OLD:
+408	11907	11934	28
+409	935	961	27 *
+410	962	991	30 *
+411	992	1017	26 *
+412	1018	1047	30 *
+413	1048	12081	30 *
+414	12082	12111	30
+NEW:
+408	11907	11934	28
+409	11935	11961	27 change
+410	11962	11991	30 change
+411	11992	12017	26 change
+412	12018	12047	30 change
+413	12048	12081	30 change
+414	12082	12111	30
+
+
+OLD:
+499	14543	14566	29 
+500	14572	14600	29
+NEW:
+499	14543	14571	29 change, versegap  14567-14571
+500	14572	14600	29
+
 ---------------------------------------------------------------------
 notes on preparation of the pdfpages file.
 Mahabharata Calcutta Edition
